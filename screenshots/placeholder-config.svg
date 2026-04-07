@@ -1,0 +1,59 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#0f0f1a"/>
+  
+  <!-- 浏览器框架 -->
+  <rect width="800" height="30" fill="#1a1a2e"/>
+  <circle cx="20" cy="15" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="15" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="15" r="6" fill="#27c93f"/>
+  
+  <!-- 地址栏 -->
+  <rect x="100" y="5" width="600" height="20" rx="4" fill="#2a2a3e"/>
+  <text x="110" y="19" font-family="Arial" font-size="11" fill="#666">http://localhost:5000/config</text>
+  
+  <!-- 网页内容 -->
+  <rect x="50" y="60" width="700" height="500" fill="#1a1a2e" rx="8"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="100" font-family="Arial" font-size="22" fill="#00d9ff" text-anchor="middle">⚙️ 配置管理</text>
+  
+  <!-- 配置表单区域 -->
+  <rect x="80" y="130" width="640" height="380" fill="#16213e" rx="8"/>
+  
+  <!-- 配置项 1: API Key -->
+  <text x="100" y="170" font-family="Arial" font-size="14" fill="#00d9ff">API Key</text>
+  <rect x="100" y="185" width="500" height="35" fill="#2a2a3e" rx="4"/>
+  <text x="110" y="207" font-family="Arial" font-size="13" fill="#666">sk-**********************</text>
+  <rect x="610" y="185" width="100" height="35" fill="#00d9ff" rx="4"/>
+  <text x="660" y="207" font-family="Arial" font-size="12" fill="#0f0f1a" text-anchor="middle">修改</text>
+  
+  <!-- 配置项 2: 模型选择 -->
+  <text x="100" y="250" font-family="Arial" font-size="14" fill="#00d9ff">模型选择</text>
+  <rect x="100" y="265" width="200" height="35" fill="#2a2a3e" rx="4"/>
+  <text x="110" y="287" font-family="Arial" font-size="13" fill="#00ff88">● 云端模型</text>
+  <text x="320" y="287" font-family="Arial" font-size="13" fill="#666">○ 本地模型</text>
+  
+  <!-- 配置项 3: 语言 -->
+  <text x="100" y="330" font-family="Arial" font-size="14" fill="#00d9ff">语言</text>
+  <rect x="100" y="345" width="150" height="35" fill="#2a2a3e" rx="4"/>
+  <text x="110" y="367" font-family="Arial" font-size="13" fill="#ffffff">简体中文</text>
+  
+  <!-- 配置项 4: 温度参数 -->
+  <text x="350" y="330" font-family="Arial" font-size="14" fill="#00d9ff">温度 (Temperature)</text>
+  <rect x="350" y="345" width="100" height="35" fill="#2a2a3e" rx="4"/>
+  <text x="400" y="367" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">0.7</text>
+  
+  <!-- 配置项 5: 最大令牌数 -->
+  <text x="100" y="410" font-family="Arial" font-size="14" fill="#00d9ff">最大令牌数</text>
+  <rect x="100" y="425" width="150" height="35" fill="#2a2a3e" rx="4"/>
+  <text x="175" y="447" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle">2048</text>
+  
+  <!-- 保存按钮 -->
+  <rect x="550" y="460" width="150" height="40" fill="#7b2cbf" rx="6"/>
+  <text x="625" y="485" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">保存配置</text>
+  
+  <!-- 底部提示 -->
+  <text x="400" y="580" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">配置管理界面截图占位图</text>
+  <text x="400" y="595" font-family="Arial" font-size="12" fill="#444" text-anchor="middle">请替换为实际运行截图</text>
+</svg>
