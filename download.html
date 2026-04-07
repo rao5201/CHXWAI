@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="下载茶海虾王 V3.1 - 完整发布包，包含所有必要文件和启动脚本">
+    <title>下载 - 茶海虾王 V3.1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦞</span>
+                茶海虾王 CHXWAI
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="docs.html">文档</a></li>
+                <li><a href="download.html" class="active">下载</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>📥 下载中心</h1>
+            <p class="subtitle">获取最新版本的茶海虾王 AI 系统</p>
+        </div>
+    </section>
+
+    <!-- 下载卡片 -->
+    <section class="container">
+        <div class="download-cards">
+            <!-- 主发布包 -->
+            <div class="download-card featured">
+                <span class="tag">⭐ 推荐下载</span>
+                <div class="version">V3.1</div>
+                <p style="color: var(--text-secondary); margin-bottom: 10px;">完整发布包</p>
+                <p class="size">📦 文件大小：约 2.7 MB</p>
+                
+                <ul class="features-list">
+                    <li>完整源代码</li>
+                    <li>配置文件模板</li>
+                    <li>Windows 启动脚本</li>
+                    <li>依赖清单</li>
+                    <li>使用文档</li>
+                    <li>示例插件</li>
+                </ul>
+                
+                <a href="茶海虾王 V3.1_完整发布包.zip" class="btn btn-primary" download>
+                    📥 立即下载
+                </a>
+                
+                <div class="hash" style="margin-top: 20px;">
+                    <strong>SHA256 校验：</strong><br>
+                    67114AA8C02679C87516990847A785C8A1E5E45E58CC99A1DEAD401E46CD8C10
+                </div>
+            </div>
+            
+            <!-- GitHub 仓库 -->
+            <div class="download-card">
+                <span class="tag" style="background: rgba(123, 44, 191, 0.15); color: #a855f7;">🔗 源码仓库</span>
+                <div class="version" style="font-size: 32px;">GitHub</div>
+                <p style="color: var(--text-secondary); margin-bottom: 10px;">源代码仓库</p>
+                <p class="size">📦 包含完整 Git 历史</p>
+                
+                <ul class="features-list">
+                    <li>最新开发版本</li>
+                    <li>完整 Git 历史</li>
+                    <li>Issue 追踪</li>
+                    <li>PR 贡献通道</li>
+                    <li>Releases 下载</li>
+                    <li>Wiki 文档</li>
+                </ul>
+                
+                <a href="https://github.com/rao5201/CHXWAI" class="btn btn-secondary" target="_blank">
+                    🔗 访问仓库
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 安装指南 -->
+    <section class="container" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">📋 安装指南</h2>
+        <p class="section-subtitle">快速开始，5 分钟完成部署</p>
+        
+        <div class="install-steps">
+            <div class="install-step">
+                <h3>步骤 1：下载发布包</h3>
+                <p>点击上方"立即下载"按钮，下载完整发布包 ZIP 文件。</p>
+            </div>
+            
+            <div class="install-step">
+                <h3>步骤 2：解压文件</h3>
+                <p>将下载的 ZIP 文件解压到你选择的目录。</p>
+                <p style="color: var(--warning);">⚠️ 注意：路径不要包含中文或空格</p>
+                <code>D:\CHXWAI\  或  /home/user/chxwai/</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>步骤 3：安装依赖</h3>
+                <p>打开命令行，进入项目目录，安装 Python 依赖。</p>
+                <code>cd D:\CHXWAI
+pip install -r requirements.txt</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>步骤 4：配置 API 密钥</h3>
+                <p>编辑 <code>config/settings.json</code> 文件，填入你的 API 密钥。</p>
+                <code>{
+  "api_key": "sk-your-api-key-here",
+  "model": "cloud",
+  "language": "zh-CN"
+}</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>步骤 5：启动系统</h3>
+                <p>Windows 用户双击 <code>start.bat</code>，或使用命令行启动。</p>
+                <code># Windows
+start.bat
+
+# 或手动启动
+python main.py</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>步骤 6：验证安装</h3>
+                <p>启动后，尝试与 AI 对话，确认系统正常运行。</p>
+                <code>你：你好
+AI: 你好！我是茶海虾王 AI 助手，有什么可以帮助你的吗？</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- 系统要求 -->
+    <section class="container">
+        <h2 class="section-title">💻 系统要求</h2>
+        <p class="section-subtitle">确保你的系统满足以下要求</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🖥️</div>
+                <h3>操作系统</h3>
+                <p style="color: var(--text-secondary); margin-top: 10px;">
+                    <strong>Windows:</strong> 10 或更高版本<br>
+                    <strong>macOS:</strong> 10.15 或更高版本<br>
+                    <strong>Linux:</strong> Ubuntu 18.04+ / CentOS 7+
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">🐍</div>
+                <h3>Python 环境</h3>
+                <p style="color: var(--text-secondary); margin-top: 10px;">
+                    <strong>版本:</strong> Python 3.8 或更高<br>
+                    <strong>推荐:</strong> Python 3.10+
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">💾</div>
+                <h3>硬件要求</h3>
+                <p style="color: var(--text-secondary); margin-top: 10px;">
+                    <strong>内存:</strong> 最低 2GB，推荐 4GB+<br>
+                    <strong>存储:</strong> 至少 500MB 可用空间
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">🌐</div>
+                <h3>网络要求</h3>
+                <p style="color: var(--text-secondary); margin-top: 10px;">
+                    <strong>云端模型:</strong> 需要互联网连接<br>
+                    <strong>本地模型:</strong> 可离线运行
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 版本历史 -->
+    <section class="container" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">📝 版本历史</h2>
+        <p class="section-subtitle">了解每个版本的更新内容</p>
+        
+        <div class="feature-card mb-20">
+            <h3 style="color: var(--primary-color);">V3.1 (当前版本)</h3>
+            <p style="color: var(--text-secondary); margin: 10px 0;">📅 发布日期：2026-04-08</p>
+            <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                <li>✅ 适配器模式完美解耦模型层</li>
+                <li>✅ 永久记忆知识库（原子写入）</li>
+                <li>✅ 智能插件系统（天气、价格查询）</li>
+                <li>✅ 双界面支持（命令行 + 网页）</li>
+                <li>✅ 工业级稳定性（重试、日志）</li>
+                <li>✅ PowerShell 一键发布包生成</li>
+                <li>✅ Windows 一键启动脚本</li>
+                <li>✅ 完整文档说明</li>
+            </ul>
+        </div>
+        
+        <div class="feature-card">
+            <h3 style="color: var(--text-secondary);">V3.0 (前一版本)</h3>
+            <p style="color: var(--text-secondary); margin: 10px 0;">📅 发布日期：2026-03-15</p>
+            <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                <li>基础对话功能</li>
+                <li>简单配置系统</li>
+                <li>命令行界面</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🦞 茶海虾王 CHXWAI</h4>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    成品级 AI 项目，适配器模式完美解耦，<br>
+                    支持本地/云端双模型无缝切换。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="docs.html">文档</a></li>
+                    <li><a href="download.html">下载</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>下载</h4>
+                <ul>
+                    <li><a href="#">V3.1 完整发布包</a></li>
+                    <li><a href="https://github.com/rao5201/CHXWAI" target="_blank">GitHub 仓库</a></li>
+                    <li><a href="docs.html#install">安装教程</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><a href="mailto:rao5201@126.com">📧 rao5201@126.com</a></li>
+                    <li><a href="https://github.com/rao5201/CHXWAI" target="_blank">🔗 GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 茶海虾王 CHXWAI 团队 | V3.1 正式版 | 
+            <a href="https://github.com/rao5201/CHXWAI" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

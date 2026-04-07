@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="茶海虾王 V3.1 技术文档 - 架构说明、安装教程、API 文档">
+    <title>文档中心 - 茶海虾王 V3.1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦞</span>
+                茶海虾王 CHXWAI
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="docs.html" class="active">文档</a></li>
+                <li><a href="download.html">下载</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>📖 文档中心</h1>
+            <p class="subtitle">完整的技术文档，帮助你快速上手</p>
+        </div>
+    </section>
+
+    <!-- 安装教程 -->
+    <section class="container" id="install">
+        <h2 class="section-title">🚀 安装教程</h2>
+        <p class="section-subtitle">5 分钟快速部署，开箱即用</p>
+        
+        <div class="install-steps">
+            <div class="install-step">
+                <h3>下载发布包</h3>
+                <p>从下载页面获取最新版本的发布包，或直接从 GitHub 下载。</p>
+                <code>https://github.com/rao5201/CHXWAI/releases</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>解压到指定目录</h3>
+                <p>将下载的 ZIP 文件解压到你希望安装的目录，建议路径不要包含中文或空格。</p>
+                <code>D:\CHXWAI\</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>配置环境变量</h3>
+                <p>编辑 <code>config/settings.json</code> 文件，配置你的 API 密钥和偏好设置。</p>
+                <code>{
+  "api_key": "your-api-key-here",
+  "model": "local",  // 或 "cloud"
+  "language": "zh-CN"
+}</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>运行启动脚本</h3>
+                <p>Windows 用户双击运行 <code>start.bat</code>，或使用命令行启动。</p>
+                <code># Windows 一键启动
+start.bat
+
+# 或手动启动
+python main.py</code>
+            </div>
+            
+            <div class="install-step">
+                <h3>验证安装</h3>
+                <p>启动后，尝试与 AI 进行简单对话，确认系统正常运行。</p>
+                <code>你好！
+> 你好！我是茶海虾王 AI 助手，有什么可以帮助你的吗？</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构 -->
+    <section class="container" id="architecture" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">🏗️ 技术架构</h2>
+        <p class="section-subtitle">清晰的分层设计，易于理解和扩展</p>
+        
+        <div class="architecture-diagram">
+            <div class="arch-layer">
+                <h4>📱 用户界面层 (UI Layer)</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">提供用户交互界面，支持多种访问方式。</p>
+                <ul>
+                    <li><strong>命令行界面 (CLI)</strong> - 基于 Python 的交互式命令行</li>
+                    <li><strong>网页界面 (Web UI)</strong> - Flask/FastAPI 提供的可视化界面</li>
+                    <li><strong>API 接口</strong> - RESTful API，支持第三方集成</li>
+                </ul>
+            </div>
+            
+            <div class="arch-layer">
+                <h4>🔌 适配器层 (Adapter Layer)</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">核心解耦层，实现模型、插件、存储的抽象。</p>
+                <ul>
+                    <li><strong>模型适配器</strong> - 统一接口，支持本地模型 (Ollama 等) 和云端模型 (GPT、Claude 等)</li>
+                    <li><strong>插件适配器</strong> - 标准化插件接口，即插即用</li>
+                    <li><strong>存储适配器</strong> - 支持多种存储后端 (JSON、SQLite、MongoDB 等)</li>
+                </ul>
+            </div>
+            
+            <div class="arch-layer">
+                <h4>🧠 核心业务层 (Core Layer)</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">系统的核心逻辑处理。</p>
+                <ul>
+                    <li><strong>对话管理引擎</strong> - 上下文管理、多轮对话支持</li>
+                    <li><strong>知识库管理系统</strong> - 永久记忆存储、原子写入保障</li>
+                    <li><strong>插件调度中心</strong> - 动态加载、执行插件</li>
+                    <li><strong>日志与监控系统</strong> - 结构化日志、性能监控</li>
+                </ul>
+            </div>
+            
+            <div class="arch-layer">
+                <h4>💾 数据存储层 (Data Layer)</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">持久化数据存储。</p>
+                <ul>
+                    <li><strong>永久记忆知识库</strong> - 原子写入，数据安全</li>
+                    <li><strong>配置文件</strong> - 外置化配置，便于部署</li>
+                    <li><strong>日志文件</strong> - 结构化日志，便于排查问题</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3 style="color: var(--primary-color); margin: 40px 0 20px;">📁 项目目录结构</h3>
+        <code style="background: var(--card-bg); padding: 20px; border-radius: 8px; display: block; overflow-x: auto; color: var(--text-secondary);">
+CHXWAI/
+├── main.py                 # 主入口文件
+├── config/
+│   └── settings.json       # 配置文件
+├── core/
+│   ├── adapter.py          # 适配器核心
+│   ├── dialogue.py         # 对话管理
+│   └── knowledge.py        # 知识库管理
+├── models/
+│   ├── local.py            # 本地模型适配
+│   └── cloud.py            # 云端模型适配
+├── plugins/
+│   ├── weather.py          # 天气查询插件
+│   └── price.py            # 价格查询插件
+├── ui/
+│   ├── cli.py              # 命令行界面
+│   └── web/                # 网页界面
+│       ├── app.py
+│       └── templates/
+├── storage/
+│   └── knowledge.db        # 知识库存储
+├── logs/                   # 日志目录
+├── start.bat               # Windows 启动脚本
+└── requirements.txt        # Python 依赖
+        </code>
+    </section>
+
+    <!-- API 文档 -->
+    <section class="container" id="api">
+        <h2 class="section-title">🔌 API 文档</h2>
+        <p class="section-subtitle">RESTful API 接口说明</p>
+        
+        <div class="feature-card mb-20">
+            <h3 style="color: var(--primary-color); margin-bottom: 15px;">POST /api/chat</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 15px;">发送消息并获取 AI 回复</p>
+            <code style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px; display: block; overflow-x: auto;">
+// 请求
+{
+  "message": "你好",
+  "conversation_id": "optional-uuid",
+  "stream": false
+}
+
+// 响应
+{
+  "reply": "你好！有什么可以帮助你的吗？",
+  "conversation_id": "uuid-xxx",
+  "timestamp": "2026-04-08T03:00:00Z"
+}</code>
+        </div>
+        
+        <div class="feature-card mb-20">
+            <h3 style="color: var(--primary-color); margin-bottom: 15px;">GET /api/knowledge</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 15px;">获取知识库内容</p>
+            <code style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px; display: block; overflow-x: auto;">
+// 响应
+{
+  "entries": [
+    {"id": 1, "key": "user_name", "value": "小明"},
+    {"id": 2, "key": "preference", "value": "喜欢蓝色"}
+  ]
+}</code>
+        </div>
+        
+        <div class="feature-card mb-20">
+            <h3 style="color: var(--primary-color); margin-bottom: 15px;">POST /api/knowledge</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 15px;">添加知识到知识库（原子写入）</p>
+            <code style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px; display: block; overflow-x: auto;">
+// 请求
+{
+  "key": "user_age",
+  "value": "25"
+}
+
+// 响应
+{
+  "success": true,
+  "id": 3
+}</code>
+        </div>
+        
+        <div class="feature-card mb-20">
+            <h3 style="color: var(--primary-color); margin-bottom: 15px;">GET /api/plugins</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 15px;">获取已安装的插件列表</p>
+            <code style="background: rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 8px; display: block; overflow-x: auto;">
+// 响应
+{
+  "plugins": [
+    {"name": "weather", "version": "1.0.0", "enabled": true},
+    {"name": "price", "version": "1.0.0", "enabled": true}
+  ]
+}</code>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="container" id="faq" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">❓ 常见问题</h2>
+        <p class="section-subtitle">快速解决使用中遇到的问题</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">Q: 如何切换本地/云端模型？</h3>
+                <p style="color: var(--text-secondary);">
+                    编辑 <code>config/settings.json</code>，将 <code>model</code> 字段改为 <code>"local"</code> 或 <code>"cloud"</code>，重启即可。
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">Q: 知识库数据存在哪里？</h3>
+                <p style="color: var(--text-secondary);">
+                    默认存储在 <code>storage/knowledge.db</code>，采用原子写入机制，确保数据安全。
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">Q: 如何添加自定义插件？</h3>
+                <p style="color: var(--text-secondary);">
+                    在 <code>plugins/</code> 目录下创建 Python 文件，实现标准插件接口，然后在配置中启用即可。
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">Q: 日志文件在哪里？</h3>
+                <p style="color: var(--text-secondary);">
+                    日志存储在 <code>logs/</code> 目录，按日期分割，便于排查问题。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🦞 茶海虾王 CHXWAI</h4>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    成品级 AI 项目，适配器模式完美解耦，<br>
+                    支持本地/云端双模型无缝切换。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="docs.html">文档</a></li>
+                    <li><a href="download.html">下载</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>文档</h4>
+                <ul>
+                    <li><a href="#install">安装教程</a></li>
+                    <li><a href="#architecture">技术架构</a></li>
+                    <li><a href="#api">API 文档</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><a href="mailto:rao5201@126.com">📧 rao5201@126.com</a></li>
+                    <li><a href="https://github.com/rao5201/CHXWAI" target="_blank">🔗 GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 茶海虾王 CHXWAI 团队 | V3.1 正式版 | 
+            <a href="https://github.com/rao5201/CHXWAI" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

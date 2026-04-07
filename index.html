@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="茶海虾王 V3.1 - 成品级 AI 项目，适配器模式解耦，支持本地/云端双模型，永久记忆知识库，插件化架构">
+    <meta name="keywords" content="AI,茶海虾王，CHXWAI，量化交易，智能助手，知识库，插件系统">
+    <meta name="author" content="茶海虾王团队">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="茶海虾王 V3.1 - 成品级 AI 项目">
+    <meta property="og:description" content="适配器模式完美解耦，支持本地/云端双模型无缝切换">
+    <meta property="og:type" content="website">
+    
+    <title>茶海虾王 V3.1 - 官网</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦞</span>
+                茶海虾王 CHXWAI
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="docs.html">文档</a></li>
+                <li><a href="download.html">下载</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="version-badge">🎉 V3.1 正式发布 - 完美收官</span>
+            <h1>茶海虾王 V3.1</h1>
+            <p class="subtitle">成品级 AI 项目 · 适配器模式完美解耦 · 工业级稳定性</p>
+            <div class="hero-buttons">
+                <a href="download.html" class="btn btn-primary">📥 立即下载</a>
+                <a href="docs.html" class="btn btn-secondary">📖 查看文档</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心特性 -->
+    <section class="container">
+        <h2 class="section-title">🌟 核心特性</h2>
+        <p class="section-subtitle">全方位的技术优势，打造卓越的 AI 体验</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🔌</div>
+                <h3>适配器模式</h3>
+                <p>完美解耦模型层，支持本地/云端双模型无缝切换，灵活应对不同场景需求。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🧩</div>
+                <h3>插件化架构</h3>
+                <p>模块化设计，便于功能扩展。天气查询、价格查询等插件即插即用。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🧠</div>
+                <h3>永久记忆知识库</h3>
+                <p>原子写入保障数据安全，支持长期记忆存储，让 AI 越用越懂你。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🖥️</div>
+                <h3>双界面支持</h3>
+                <p>命令行 + 网页可视化双界面，满足不同用户的使用习惯和场景需求。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🛡️</div>
+                <h3>工业级稳定性</h3>
+                <p>重试机制、日志系统、异常处理，确保系统稳定可靠运行。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📦</div>
+                <h3>开箱即用</h3>
+                <p>PowerShell 一键生成发布包，Windows 一键启动，EXE 打包功能，真正零配置。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目截图 -->
+    <section class="container" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">📸 项目截图</h2>
+        <p class="section-subtitle">直观感受茶海虾王的界面与功能</p>
+        
+        <div class="screenshots-grid">
+            <div class="screenshot-card">
+                <div class="screenshot-placeholder">
+                    🖥️ 命令行界面截图<br>（请替换为实际截图）
+                </div>
+                <div class="caption">命令行交互界面 - 简洁高效</div>
+            </div>
+            <div class="screenshot-card">
+                <div class="screenshot-placeholder">
+                    🌐 网页可视化界面截图<br>（请替换为实际截图）
+                </div>
+                <div class="caption">网页可视化界面 - 直观友好</div>
+            </div>
+            <div class="screenshot-card">
+                <div class="screenshot-placeholder">
+                    ⚙️ 配置管理界面截图<br>（请替换为实际截图）
+                </div>
+                <div class="caption">配置管理中心 - 灵活便捷</div>
+            </div>
+            <div class="screenshot-card">
+                <div class="screenshot-placeholder">
+                    📊 知识库管理界面截图<br>（请替换为实际截图）
+                </div>
+                <div class="caption">知识库管理 - 持久化存储</div>
+            </div>
+        </div>
+        
+        <p class="text-center mt-40" style="color: var(--text-secondary);">
+            💡 提示：请将实际运行截图替换上方占位图，展示真实界面效果
+        </p>
+    </section>
+
+    <!-- 技术架构 -->
+    <section class="container">
+        <h2 class="section-title">🏗️ 技术架构</h2>
+        <p class="section-subtitle">清晰的分层设计，易于理解和扩展</p>
+        
+        <div class="architecture-diagram">
+            <div class="arch-layer">
+                <h4>📱 用户界面层</h4>
+                <ul>
+                    <li>命令行界面 (CLI)</li>
+                    <li>网页可视化界面 (Web UI)</li>
+                    <li>RESTful API 接口</li>
+                </ul>
+            </div>
+            <div class="arch-layer">
+                <h4>🔌 适配器层</h4>
+                <ul>
+                    <li>模型适配器 (本地/云端)</li>
+                    <li>插件适配器</li>
+                    <li>存储适配器</li>
+                </ul>
+            </div>
+            <div class="arch-layer">
+                <h4>🧠 核心业务层</h4>
+                <ul>
+                    <li>对话管理引擎</li>
+                    <li>知识库管理系统</li>
+                    <li>插件调度中心</li>
+                    <li>日志与监控系统</li>
+                </ul>
+            </div>
+            <div class="arch-layer">
+                <h4>💾 数据存储层</h4>
+                <ul>
+                    <li>永久记忆知识库 (原子写入)</li>
+                    <li>配置文件 (外置化)</li>
+                    <li>日志文件 (结构化)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用场景 -->
+    <section class="container" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">🎯 应用场景</h2>
+        <p class="section-subtitle">多功能 AI 系统，适用于多种场景</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">👤</div>
+                <h3>个人 AI 助手</h3>
+                <p>日常对话、信息查询、任务提醒，你的私人智能助手。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📚</div>
+                <h3>技术学习案例</h3>
+                <p>完整的 AI 项目架构，学习适配器模式、插件化设计的最佳实践。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🌐</div>
+                <h3>开源项目展示</h3>
+                <p>开源代码，欢迎贡献，共同打造更强大的 AI 生态系统。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💼</div>
+                <h3>商用产品原型</h3>
+                <p>成熟的架构设计，可直接作为商用 AI 产品的基础框架。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎓</div>
+                <h3>毕业设计作品</h3>
+                <p>完整的文档、代码、部署方案，符合毕业设计的高标准要求。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔬</div>
+                <h3>AI 研究实验</h3>
+                <p>灵活的架构支持各种 AI 实验，快速验证新想法。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🦞 茶海虾王 CHXWAI</h4>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    成品级 AI 项目，适配器模式完美解耦，<br>
+                    支持本地/云端双模型无缝切换。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="docs.html">文档</a></li>
+                    <li><a href="download.html">下载</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="docs.html#install">安装教程</a></li>
+                    <li><a href="docs.html#architecture">技术架构</a></li>
+                    <li><a href="https://github.com/rao5201/CHXWAI" target="_blank">GitHub 仓库</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><a href="mailto:rao5201@126.com">📧 rao5201@126.com</a></li>
+                    <li><a href="https://github.com/rao5201/CHXWAI" target="_blank">🔗 GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 茶海虾王 CHXWAI 团队 | V3.1 正式版 | 
+            <a href="https://github.com/rao5201/CHXWAI" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
