@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="茶海虾王 V3.1 博客 - 更新日志、使用技巧、技术分享">
+    <title>博客 - 茶海虾王 V3.1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 博客页面特有样式 */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .blog-card .content {
+            padding: 25px;
+        }
+        
+        .blog-card .category {
+            display: inline-block;
+            background: rgba(0, 217, 255, 0.15);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .blog-card .category.update {
+            background: rgba(0, 255, 136, 0.15);
+            color: var(--success);
+        }
+        
+        .blog-card .category.tutorial {
+            background: rgba(255, 193, 7, 0.15);
+            color: var(--warning);
+        }
+        
+        .blog-card .category.tech {
+            background: rgba(123, 44, 191, 0.15);
+            color: #a855f7;
+        }
+        
+        .blog-card h3 {
+            color: var(--text-primary);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .blog-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .blog-card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .blog-card .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .blog-card .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        /* 标签云 */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tag {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            background: rgba(0, 217, 255, 0.2);
+        }
+        
+        /* 归档列表 */
+        .archive-list {
+            list-style: none;
+        }
+        
+        .archive-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .archive-list li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .archive-list li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .archive-list .date {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦞</span>
+                茶海虾王 CHXWAI
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="docs.html">文档</a></li>
+                <li><a href="download.html">下载</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="blog.html" class="active">博客</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>📝 博客中心</h1>
+            <p class="subtitle">更新日志、使用技巧、技术分享</p>
+        </div>
+    </section>
+
+    <!-- 精选文章 -->
+    <section class="container">
+        <h2 class="section-title">🔥 精选文章</h2>
+        <p class="section-subtitle">推荐阅读</p>
+        
+        <div class="blog-grid">
+            <a href="blog-v3.1-release.html" class="blog-card">
+                <div class="content">
+                    <span class="category update">📢 更新日志</span>
+                    <h3>V3.1 正式发布 - 完美收官！</h3>
+                    <p>茶海虾王 V3.1 正式发布！本次更新带来了适配器模式、永久记忆知识库、插件化架构等多项重大改进...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-08</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="blog-card">
+                <div class="content">
+                    <span class="category tutorial">📚 使用教程</span>
+                    <h3>5 分钟快速上手茶海虾王</h3>
+                    <p>从零开始，教你快速部署和配置茶海虾王 AI 系统，包含详细的步骤说明和常见问题解答...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-07</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="blog-card">
+                <div class="content">
+                    <span class="category tech">💡 技术分享</span>
+                    <h3>适配器模式在 AI 项目中的应用</h3>
+                    <p>深入解析适配器模式如何实现模型层的解耦，支持本地/云端双模型无缝切换...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-05</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 所有文章 -->
+    <section class="container" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">📚 所有文章</h2>
+        <p class="section-subtitle">按时间排序</p>
+        
+        <div class="blog-grid">
+            <a href="blog-v3.1-release.html" class="blog-card">
+                <div class="content">
+                    <span class="category update">📢 更新日志</span>
+                    <h3>V3.1 正式发布 - 完美收官！</h3>
+                    <p>茶海虾王 V3.1 正式发布！本次更新带来了适配器模式、永久记忆知识库、插件化架构等多项重大改进...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-08</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="blog-card">
+                <div class="content">
+                    <span class="category tutorial">📚 使用教程</span>
+                    <h3>如何配置永久记忆知识库</h3>
+                    <p>详细讲解知识库的配置和使用方法，包括原子写入机制、数据备份等高级功能...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-06</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="blog-card">
+                <div class="content">
+                    <span class="category tech">💡 技术分享</span>
+                    <h3>插件开发指南</h3>
+                    <p>从零开始开发一个天气查询插件，包含完整的代码示例和调试技巧...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-04</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="blog-card">
+                <div class="content">
+                    <span class="category tutorial">📚 使用教程</span>
+                    <h3>命令行 vs 网页界面：如何选择</h3>
+                    <p>对比两种界面的优缺点，帮助你根据使用场景选择最适合的交互方式...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-02</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="blog-card">
+                <div class="content">
+                    <span class="category tech">💡 技术分享</span>
+                    <h3>原子写入机制详解</h3>
+                    <p>为什么知识库采用原子写入？如何确保数据安全性？本文深入解析...</p>
+                    <div class="meta">
+                        <span>📅 2026-04-01</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="blog-card">
+                <div class="content">
+                    <span class="category update">📢 更新日志</span>
+                    <h3>V3.0 发布 - 基础功能完成</h3>
+                    <p>茶海虾王 V3.0 正式发布，包含基础对话功能、简单配置系统和命令行界面...</p>
+                    <div class="meta">
+                        <span>📅 2026-03-15</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 标签云 -->
+    <section class="container">
+        <h2 class="section-title">🏷️ 标签云</h2>
+        <p class="section-subtitle">浏览感兴趣的话题</p>
+        
+        <div class="tag-cloud">
+            <a href="#" class="tag">#更新日志</a>
+            <a href="#" class="tag">#使用教程</a>
+            <a href="#" class="tag">#技术分享</a>
+            <a href="#" class="tag">#适配器模式</a>
+            <a href="#" class="tag">#知识库</a>
+            <a href="#" class="tag">#插件开发</a>
+            <a href="#" class="tag">#API 文档</a>
+            <a href="#" class="tag">#部署指南</a>
+            <a href="#" class="tag">#性能优化</a>
+            <a href="#" class="tag">#常见问题</a>
+        </div>
+    </section>
+
+    <!-- 归档 -->
+    <section class="container" style="background: rgba(0, 217, 255, 0.02);">
+        <h2 class="section-title">📅 文章归档</h2>
+        <p class="section-subtitle">按月份查看</p>
+        
+        <div style="max-width: 600px; margin: 0 auto;">
+            <ul class="archive-list">
+                <li>
+                    <a href="#">2026 年 4 月 (6 篇)</a>
+                    <span class="date">最新文章</span>
+                </li>
+                <li>
+                    <a href="#">2026 年 3 月 (2 篇)</a>
+                    <span class="date">V3.0 发布</span>
+                </li>
+                <li>
+                    <a href="#">2026 年 2 月 (1 篇)</a>
+                    <span class="date">项目启动</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🦞 茶海虾王 CHXWAI</h4>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    成品级 AI 项目，适配器模式完美解耦，<br>
+                    支持本地/云端双模型无缝切换。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="docs.html">文档</a></li>
+                    <li><a href="download.html">下载</a></li>
+                    <li><a href="about.html">关于</a></li>
+                    <li><a href="blog.html">博客</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>博客分类</h4>
+                <ul>
+                    <li><a href="#">📢 更新日志</a></li>
+                    <li><a href="#">📚 使用教程</a></li>
+                    <li><a href="#">💡 技术分享</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><a href="mailto:rao5201@126.com">📧 rao5201@126.com</a></li>
+                    <li><a href="https://github.com/rao5201/CHXWAI" target="_blank">🔗 GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 茶海虾王 CHXWAI 团队 | V3.1 正式版 | 
+            <a href="https://github.com/rao5201/CHXWAI" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
