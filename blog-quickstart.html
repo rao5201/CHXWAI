@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="5 分钟快速上手茶海虾王 - 从零开始的安装配置教程">
+    <title>5 分钟快速上手茶海虾王 - 茶海虾王 V3.1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 文章页面特有样式（复用 blog-v3.1-release.html 的样式） */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 30px;
+        }
+        
+        .article-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .article-header .category {
+            display: inline-block;
+            background: rgba(255, 193, 7, 0.15);
+            color: var(--warning);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .article-header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .article-content {
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            line-height: 2;
+        }
+        
+        .article-content h2 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 217, 255, 0.1);
+        }
+        
+        .article-content h3 {
+            color: var(--text-primary);
+            font-size: 22px;
+            margin: 30px 0 15px;
+        }
+        
+        .article-content p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        .article-content ul,
+        .article-content ol {
+            color: var(--text-secondary);
+            margin-left: 30px;
+            margin-bottom: 20px;
+            line-height: 2;
+        }
+        
+        .article-content code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: "Consolas", "Monaco", monospace;
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+        
+        .article-content pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .article-content pre code {
+            padding: 0;
+            background: none;
+        }
+        
+        .highlight-box {
+            background: rgba(0, 217, 255, 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        
+        .article-footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .article-tags {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .article-tags .tag {
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦞</span>
+                茶海虾王 CHXWAI
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="docs.html">文档</a></li>
+                <li><a href="download.html">下载</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 文章内容 -->
+    <article class="article-container">
+        <header class="article-header">
+            <span class="category">📚 使用教程</span>
+            <h1>5 分钟快速上手茶海虾王</h1>
+            <div class="article-meta">
+                <span>📅 2026-04-08</span>
+                <span>👤 CHXWAI Team</span>
+                <span>⏱️ 阅读时间 5 分钟</span>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <p class="lead" style="font-size: 18px; color: var(--text-primary);">
+                从零开始，5 分钟完成茶海虾王的安装和配置，快速开始你的 AI 之旅。
+            </p>
+
+            <div class="highlight-box">
+                <p><strong>💡 提示：</strong> 本教程适用于 Windows、macOS 和 Linux 系统，全程无需编程基础。</p>
+            </div>
+
+            <h2>步骤 1：下载发布包</h2>
+            <p>访问下载页面获取最新版本：</p>
+            <ul>
+                <li><a href="download.html" style="color: var(--primary-color);">下载中心 →</a></li>
+                <li>或直接访问 <a href="https://github.com/rao5201/CHXWAI/releases" style="color: var(--primary-color);" target="_blank">GitHub Releases</a></li>
+            </ul>
+
+            <h2>步骤 2：解压文件</h2>
+            <p>将下载的 ZIP 文件解压到合适的目录：</p>
+            <pre><code># Windows 示例
+D:\CHXWAI\
+
+# macOS/Linux示例
+~/chxwai/</code></pre>
+            
+            <div class="highlight-box">
+                <p><strong>⚠️ 注意：</strong> 路径不要包含中文或空格，避免潜在问题。</p>
+            </div>
+
+            <h2>步骤 3：安装依赖</h2>
+            <p>打开命令行工具，进入项目目录，安装 Python 依赖：</p>
+            <pre><code>cd D:\CHXWAI
+pip install -r requirements.txt</code></pre>
+
+            <h2>步骤 4：配置 API 密钥</h2>
+            <p>编辑 <code>config/settings.json</code> 文件：</p>
+            <pre><code>{
+  "api_key": "sk-your-api-key-here",
+  "model": "cloud",
+  "language": "zh-CN"
+}</code></pre>
+
+            <div class="highlight-box">
+                <p><strong>🔑 获取 API 密钥：</strong> 如果你还没有 API 密钥，可以访问 AI 服务提供商官网获取。</p>
+            </div>
+
+            <h2>步骤 5：启动系统</h2>
+            <p><strong>Windows 用户</strong>：双击 <code>start.bat</code></p>
+            <p><strong>macOS/Linux用户</strong>：运行 <code>./start.sh</code></p>
+            <p><strong>或手动启动</strong>：</p>
+            <pre><code>python main.py</code></pre>
+
+            <h2>步骤 6：开始对话</h2>
+            <p>启动后，尝试与 AI 进行第一次对话：</p>
+            <pre><code>你：你好
+AI: 你好！我是茶海虾王 AI 助手，有什么可以帮助你的吗？</code></pre>
+
+            <h2>🎉 完成！</h2>
+            <p>现在你已经成功安装并运行了茶海虾王！接下来可以：</p>
+            <ul>
+                <li>探索各种功能</li>
+                <li>配置永久记忆知识库</li>
+                <li>安装实用插件</li>
+                <li>自定义你的 AI 助手</li>
+            </ul>
+
+            <h2>❓ 遇到问题？</h2>
+            <p>如果安装过程中遇到问题，可以：</p>
+            <ul>
+                <li>查看 <a href="docs.html" style="color: var(--primary-color);">完整文档</a></li>
+                <li>查看 <a href="docs.html#faq" style="color: var(--primary-color);">常见问题</a></li>
+                <li>在 <a href="https://github.com/rao5201/CHXWAI/issues" style="color: var(--primary-color);" target="_blank">GitHub Issues</a> 中提问</li>
+            </ul>
+        </div>
+
+        <footer class="article-footer">
+            <div class="article-tags">
+                <a href="#" class="tag">#教程</a>
+                <a href="#" class="tag">#快速上手</a>
+                <a href="#" class="tag">#安装指南</a>
+            </div>
+            <div class="share-buttons">
+                <a href="blog.html" class="share-btn" style="background: rgba(0, 217, 255, 0.1); color: var(--primary-color); padding: 10px 20px; border-radius: 8px; text-decoration: none;">← 返回博客</a>
+            </div>
+        </footer>
+    </article>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🦞 茶海虾王 CHXWAI</h4>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    成品级 AI 项目，适配器模式完美解耦，<br>
+                    支持本地/云端双模型无缝切换。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="docs.html">文档</a></li>
+                    <li><a href="download.html">下载</a></li>
+                    <li><a href="about.html">关于</a></li>
+                    <li><a href="blog.html">博客</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><a href="mailto:rao5201@126.com">📧 rao5201@126.com</a></li>
+                    <li><a href="https://github.com/rao5201/CHXWAI" target="_blank">🔗 GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 茶海虾王 CHXWAI 团队 | V3.1 正式版 | 
+            <a href="https://github.com/rao5201/CHXWAI" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

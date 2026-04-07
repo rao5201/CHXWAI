@@ -1,0 +1,30 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  
+  <!-- 标题栏 -->
+  <rect width="800" height="40" fill="#0f0f1a"/>
+  <text x="20" y="25" font-family="Arial" font-size="14" fill="#00d9ff">Terminal - CHXWAI</text>
+  
+  <!-- 对话内容 -->
+  <text x="30" y="100" font-family="Arial" font-size="16" fill="#ffffff">🦞 茶海虾王 V3.1 启动成功...</text>
+  
+  <text x="30" y="150" font-family="Arial" font-size="16" fill="#00ff88">你：你好</text>
+  <text x="30" y="190" font-family="Arial" font-size="16" fill="#b0b0b0">AI: 你好！我是茶海虾王 AI 助手，有什么可以帮助你的吗？</text>
+  
+  <text x="30" y="240" font-family="Arial" font-size="16" fill="#00ff88">你：帮我查一下北京的天气</text>
+  <text x="30" y="280" font-family="Arial" font-size="16" fill="#b0b0b0">AI: 正在查询北京天气...</text>
+  <text x="30" y="310" font-family="Arial" font-size="16" fill="#b0b0b0">北京今天晴朗，气温 15-25°C，空气质量优。</text>
+  
+  <text x="30" y="360" font-family="Arial" font-size="16" fill="#00ff88">你：记住了，我喜欢蓝色</text>
+  <text x="30" y="400" font-family="Arial" font-size="16" fill="#b0b0b0">AI: 好的，我已经记住你喜欢的颜色是蓝色。</text>
+  
+  <text x="30" y="450" font-family="Arial" font-size="16" fill="#00ff88">你：</text>
+  <rect x="60" y="435" width="10" height="20" fill="#00d9ff">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- 底部提示 -->
+  <text x="400" y="550" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">命令行界面截图占位图</text>
+  <text x="400" y="575" font-family="Arial" font-size="12" fill="#444" text-anchor="middle">请替换为实际运行截图</text>
+</svg>
